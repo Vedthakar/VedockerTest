@@ -1,7 +1,9 @@
-FROM alpine:3.23
+FROM python:3.12-alpine
 
-WORKDIR /app
+WORKDIR /site
 
-COPY message.txt /app/message.txt
+COPY index.html /site/index.html
 
-CMD ["sh", "-c", "echo 'Vedocker demo container started'; cat /app/message.txt; tail -f /dev/null"]
+EXPOSE 8080
+
+CMD ["python3", "-m", "http.server", "8080", "-d", "/site"]
