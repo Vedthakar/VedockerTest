@@ -1,0 +1,1 @@
+This repo was cloned from GitHub, built into an image, and started successfully by Vedocker.
